@@ -854,6 +854,8 @@ header.scrolled {
 
 /* ── FOOTER ── */
 footer {
+  position: relative;
+  z-index: 10;
   background: linear-gradient(180deg, #020200 0%, #010100 100%);
   padding: clamp(3rem, 8vw, 5rem) clamp(1rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2.5rem);
   border-top: 1px solid rgba(200, 150, 46, 0.18);
@@ -1186,8 +1188,8 @@ footer {
 
 /* ── CONTACT PAGE LAYOUT ── */
 .hf-contact-page {
-  padding-top: 120px;
-  min-height: 100vh;
+  padding-top: 130px;
+  padding-bottom: 4rem;
   position: relative;
   background: radial-gradient(circle at 50% 15%, rgba(200, 150, 46, 0.08) 0%, transparent 60%), #04050d;
 }
@@ -1195,7 +1197,7 @@ footer {
 .hf-contact-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 5rem;
+  padding: 0 1.5rem;
 }
 
 .hf-contact-hero {
