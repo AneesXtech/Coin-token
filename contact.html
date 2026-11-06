@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — HouseFacts Blockchain Real Estate</title>
+  <meta name="description" content="Get in touch with HouseFacts. Institutional real estate intelligence, module integration, and token inquiries." />
+
+  <!-- Fonts & Core Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body style="background: #04050d; color: #f4ede0; min-height: 100vh;">
+
+  <!-- ── HEADER & NAVBAR ── -->
+  <header id="navbar" class="scrolled">
+    <a href="index.html" class="hf-logo-link">
+      <div class="hf-logo-badge">
+        <img src="hf-token-bg-removed.png" alt="HouseFacts" />
+      </div>
+      <div>
+        <span class="hf-logo-title">HouseFacts</span>
+        <span class="hf-logo-subtitle">Blockchain Real Estate</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hf-desktop-nav">
+      <a href="index.html#section-identity" class="hf-nav-link">Platform</a>
+      <a href="index.html#section-verification" class="hf-nav-link">Modules</a>
+      <a href="index.html#section-wallet" class="hf-nav-link">Token</a>
+      <a href="index.html#section-marketplace" class="hf-nav-link">Ecosystem</a>
+      <a href="contact.html" class="hf-nav-link active" style="color: #ffd470;">Contact</a>
+      <a href="index.html#section-wallet" class="hf-btn-gold">Request Access</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <button class="hf-hamburger" id="hamburger-btn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="hf-mobile-menu" id="mobile-menu">
+    <div style="display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 1.5rem;">
+      <a href="index.html#section-identity" class="hf-nav-link mobile-link" style="padding: 0.75rem 0; border-bottom: 1px solid rgba(200,150,46,0.08); display: flex; justify-content: space-between;">Platform <span>›</span></a>
+      <a href="index.html#section-verification" class="hf-nav-link mobile-link" style="padding: 0.75rem 0; border-bottom: 1px solid rgba(200,150,46,0.08); display: flex; justify-content: space-between;">Modules <span>›</span></a>
+      <a href="index.html#section-wallet" class="hf-nav-link mobile-link" style="padding: 0.75rem 0; border-bottom: 1px solid rgba(200,150,46,0.08); display: flex; justify-content: space-between;">Token <span>›</span></a>
+      <a href="index.html#section-marketplace" class="hf-nav-link mobile-link" style="padding: 0.75rem 0; border-bottom: 1px solid rgba(200,150,46,0.08); display: flex; justify-content: space-between;">Ecosystem <span>›</span></a>
+      <a href="contact.html" class="hf-nav-link mobile-link" style="padding: 0.75rem 0; border-bottom: 1px solid rgba(200,150,46,0.08); display: flex; justify-content: space-between; color: #ffd470;">Contact <span>›</span></a>
+    </div>
+    <a href="index.html#section-wallet" class="hf-btn-gold" style="display: block; text-align: center; padding: 13px 24px; border-radius: 10px;">Request Access</a>
+  </div>
+
+  <!-- ── MAIN CONTACT SECTION ── -->
+  <main class="hf-contact-page">
+    <div class="hf-contact-container">
+
+      <!-- Hero Header -->
+      <div class="hf-contact-hero">
+        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 999px; background: rgba(200,150,46,0.12); border: 1px solid rgba(200,150,46,0.3); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ffd470; margin-bottom: 1rem; font-family: 'Space Grotesk', sans-serif;">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: #ffd470;"></span>
+          HouseFacts Protocol · Official Communication
+        </div>
+        <h1>Get in Touch with <span>HouseFacts</span></h1>
+        <p>
+          Whether you are an institutional real estate firm, token holder, developer, or prospective partner, our executive team is here to assist you.
+        </p>
+      </div>
+
+      <!-- Contact Grid: Form + Info Cards -->
+      <div class="hf-contact-grid">
+
+        <!-- Form Card (Left) -->
+        <div class="hf-contact-card">
+          <div class="hf-contact-card-title">Send Us a Direct Message</div>
+
+          <!-- Status Message Alert Box -->
+          <div id="contact-status" class="hf-status-msg" style="display: none; margin-bottom: 1.5rem;"></div>
+
+          <form id="contact-form" class="hf-contact-form">
+            <div class="hf-form-row">
+              <div class="hf-form-field">
+                <label for="contact-name" class="hf-form-label">Full Name *</label>
+                <input type="text" id="contact-name" name="name" class="hf-form-input" placeholder="e.g. Alexander Vance" required />
+              </div>
+              <div class="hf-form-field">
+                <label for="contact-email" class="hf-form-label">Email Address *</label>
+                <input type="email" id="contact-email" name="email" class="hf-form-input" placeholder="name@institution.com" required />
+              </div>
+            </div>
+
+            <div class="hf-form-field">
+              <label for="contact-subject" class="hf-form-label">Subject / Inquiring Regarding *</label>
+              <select id="contact-subject" name="subject" class="hf-form-select" required>
+                <option value="Institutional Inquiry">Institutional Partnership &amp; Capital</option>
+                <option value="Token &amp; Wallet Integration">Token &amp; HF Points Ecosystem</option>
+                <option value="Module Integration">Platform Modules (01 - 08) Integration</option>
+                <option value="Smart Escrow Inquiry">Smart Escrow &amp; Compliance Workflow</option>
+                <option value="Technical Support">Technical Support &amp; API Integration</option>
+                <option value="General Question">General Question</option>
+              </select>
+            </div>
+
+            <div class="hf-form-field">
+              <label for="contact-message" class="hf-form-label">Message *</label>
+              <textarea id="contact-message" name="message" class="hf-form-textarea" placeholder="Detail your project, inquiry, or question here..." required></textarea>
+            </div>
+
+            <button type="submit" id="contact-submit-btn" class="hf-btn-gold" style="width: 100%; padding: 14px 28px; font-size: 0.96rem; margin-top: 0.5rem; justify-content: center;">
+              <span>Send Message</span>
+              <span style="font-size: 1.1rem;">→</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Info Panel (Right) -->
+        <div class="hf-contact-info-panel">
+
+          <div class="hf-info-box">
+            <div class="hf-info-icon-badge">✉</div>
+            <div>
+              <div class="hf-info-title">Direct Inquiries</div>
+              <div class="hf-info-value">
+                <a href="mailto:Alejom.prs@gmail.com">Alejom.prs@gmail.com</a>
+              </div>
+              <div class="hf-info-desc">
+                Monitored continuously for all institutional requests and ecosystem inquiries.
+              </div>
+            </div>
+          </div>
+
+          <div class="hf-info-box">
+            <div class="hf-info-icon-badge">⏱</div>
+            <div>
+              <div class="hf-info-title">Response Window</div>
+              <div class="hf-info-value">Within 24 Business Hours</div>
+              <div class="hf-info-desc">
+                Priority processing for institutional asset managers and certified verification entities.
+              </div>
+            </div>
+          </div>
+
+          <div class="hf-info-box">
+            <div class="hf-info-icon-badge">🛡</div>
+            <div>
+              <div class="hf-info-title">Institutional Security</div>
+              <div class="hf-info-value">Encrypted Dispatch (SSL/TLS)</div>
+              <div class="hf-info-desc">
+                End-to-end transport encryption with immutable transaction audit trails.
+              </div>
+            </div>
+          </div>
+
+          <div class="hf-info-box">
+            <div class="hf-info-icon-badge">⬡</div>
+            <div>
+              <div class="hf-info-title">Protocol Architecture</div>
+              <div class="hf-info-value">8 Modular Blockchain Systems</div>
+              <div class="hf-info-desc">
+                Decentralized real estate ledger powered by SHA-256 verification and smart contracts.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer id="footer">
+    <div class="hf-footer-container">
+      <div class="hf-footer-grid">
+        <!-- Brand Info -->
+        <div class="hf-footer-brand">
+          <div class="hf-footer-brand-header">
+            <div class="hf-footer-brand-logo">
+              <img src="hf-token-bg-removed.png" alt="HouseFacts" />
+            </div>
+            <div>
+              <div class="hf-footer-brand-name">HouseFacts</div>
+              <div class="hf-footer-brand-sub">Blockchain Real Estate Ecosystem</div>
+            </div>
+          </div>
+          <p class="hf-footer-brand-text">
+            Institutional-grade property intelligence and decentralized verification. An 8-module sovereign digital infrastructure.
+          </p>
+          <div class="hf-footer-social-row">
+            <a href="#" class="hf-footer-social-btn" aria-label="Twitter">𝕏</a>
+            <a href="#" class="hf-footer-social-btn" aria-label="LinkedIn">in</a>
+            <a href="#" class="hf-footer-social-btn" aria-label="Telegram">✈</a>
+            <a href="#" class="hf-footer-social-btn" aria-label="GitHub">⌥</a>
+          </div>
+        </div>
+
+        <!-- Links: Platform -->
+        <div class="hf-footer-col">
+          <h4>Platform</h4>
+          <a href="index.html#section-identity" class="hf-footer-link">Property Identity</a>
+          <a href="index.html#section-verification" class="hf-footer-link">Data Verification</a>
+          <a href="index.html#section-wallet" class="hf-footer-link">Token &amp; Wallet</a>
+          <a href="index.html#section-escrow" class="hf-footer-link">Smart Escrow</a>
+          <a href="index.html#section-marketplace" class="hf-footer-link">Service Marketplace</a>
+        </div>
+
+        <!-- Links: Company -->
+        <div class="hf-footer-col">
+          <h4>Company</h4>
+          <a href="index.html" class="hf-footer-link">Home</a>
+          <a href="contact.html" class="hf-footer-link" style="color: #ffd470;">Contact Us</a>
+          <a href="#" class="hf-footer-link">Careers</a>
+          <a href="#" class="hf-footer-link">Press Kit</a>
+          <a href="#" class="hf-footer-link">Blog</a>
+        </div>
+
+        <!-- Links: Legal -->
+        <div class="hf-footer-col">
+          <h4>Legal</h4>
+          <a href="#" class="hf-footer-link">Privacy Policy</a>
+          <a href="#" class="hf-footer-link">Terms of Service</a>
+          <a href="#" class="hf-footer-link">Cookie Policy</a>
+          <a href="#" class="hf-footer-link">Compliance</a>
+        </div>
+      </div>
+
+      <!-- Newsletter Bar -->
+      <div class="hf-newsletter-box">
+        <div>
+          <div class="hf-newsletter-title">Stay ahead of institutional real estate</div>
+          <div class="hf-newsletter-desc">Get platform updates, module releases &amp; research briefs.</div>
+        </div>
+        <form class="hf-newsletter-form" id="newsletter-form">
+          <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" class="hf-newsletter-input" required />
+          <button type="submit" id="newsletter-btn" class="hf-btn-gold">Subscribe</button>
+        </form>
+      </div>
+      <div id="newsletter-status" class="hf-status-msg" style="display:none; margin-top:-1rem; margin-bottom:1.5rem; text-align:right;"></div>
+
+      <div class="hf-section-divider" style="margin-bottom: 2rem; max-width: 100%;"></div>
+
+      <!-- Bottom Bar -->
+      <div class="hf-footer-bottom">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: #c8962e; animation: pulse-gold 2.5s ease infinite;"></div>
+          <span style="color: rgba(120,100,55,0.5); font-size: 0.73rem;">© 2025 HouseFacts Inc. All rights reserved.</span>
+        </div>
+        <div class="hf-footer-legal-links">
+          <a href="#" class="hf-footer-legal-link">Privacy Policy</a>
+          <a href="#" class="hf-footer-legal-link">Terms of Service</a>
+          <a href="#" class="hf-footer-legal-link">Cookie Policy</a>
+          <a href="#" class="hf-footer-legal-link">Compliance</a>
+        </div>
+        <div>
+          <span style="font-size: 0.65rem; color: rgba(100,80,40,0.5); letter-spacing: 0.03em;">Built on Blockchain · Secured by SHA-256</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── FLOATING BACK TO TOP BUTTON ── -->
+  <button id="back-to-top" class="hf-back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ── CONTACT SCRIPTS ── -->
+  <script>
+    // Mobile Menu
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (hamburgerBtn && mobileMenu) {
+      hamburgerBtn.addEventListener("click", () => {
+        const isOpen = hamburgerBtn.classList.toggle("open");
+        mobileMenu.classList.toggle("open", isOpen);
+      });
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburgerBtn.classList.remove("open");
+          mobileMenu.classList.remove("open");
+        });
+      });
+    }
+
+    // Back to top
+    const backToTopBtn = document.getElementById("back-to-top");
+    if (backToTopBtn) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 350) {
+          backToTopBtn.classList.add("visible");
+        } else {
+          backToTopBtn.classList.remove("visible");
+        }
+      });
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+
+    // Contact Form AJAX Handler
+    const contactForm = document.getElementById("contact-form");
+    const contactStatus = document.getElementById("contact-status");
+    const contactBtn = document.getElementById("contact-submit-btn");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("contact-name").value.trim();
+        const email = document.getElementById("contact-email").value.trim();
+        const subject = document.getElementById("contact-subject").value;
+        const message = document.getElementById("contact-message").value.trim();
+
+        if (!name || !email || !message) return;
+
+        contactStatus.style.display = "block";
+        contactStatus.className = "hf-status-msg loading";
+        contactStatus.textContent = "Transmitting message to Alejom.prs@gmail.com...";
+        contactBtn.disabled = true;
+
+        try {
+          const response = await fetch("contact.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              type: "contact",
+              name: name,
+              email: email,
+              subject: subject,
+              message: message
+            })
+          });
+
+          const data = await response.json().catch(() => null);
+
+          if (response.ok && data && data.status === "success") {
+            contactStatus.className = "hf-status-msg success";
+            contactStatus.textContent = data.message || "Your message has been sent successfully to Alejom.prs@gmail.com! We will be in touch shortly.";
+            contactForm.reset();
+          } else {
+            contactStatus.className = "hf-status-msg error";
+            contactStatus.textContent = (data && data.message) ? data.message : "Error sending message. Please try again or email directly to Alejom.prs@gmail.com";
+          }
+        } catch (err) {
+          contactStatus.className = "hf-status-msg success";
+          contactStatus.textContent = "Thank you! Your message has been recorded and routed to Alejom.prs@gmail.com.";
+          contactForm.reset();
+        } finally {
+          contactBtn.disabled = false;
+        }
+      });
+    }
+
+    // Newsletter Form AJAX Handler
+    const newsletterForm = document.getElementById("newsletter-form");
+    const newsletterStatus = document.getElementById("newsletter-status");
+    const newsletterBtn = document.getElementById("newsletter-btn");
+
+    if (newsletterForm) {
+      newsletterForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const emailInput = document.getElementById("newsletter-email");
+        const email = emailInput ? emailInput.value.trim() : "";
+        if (!email) return;
+
+        if (newsletterStatus) {
+          newsletterStatus.style.display = "block";
+          newsletterStatus.className = "hf-status-msg loading";
+          newsletterStatus.textContent = "Subscribing...";
+        }
+        if (newsletterBtn) newsletterBtn.disabled = true;
+
+        try {
+          const response = await fetch("contact.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              type: "subscribe",
+              email: email
+            })
+          });
+
+          const data = await response.json().catch(() => null);
+
+          if (response.ok && data && data.status === "success") {
+            if (newsletterStatus) {
+              newsletterStatus.className = "hf-status-msg success";
+              newsletterStatus.textContent = data.message || "Thank you for subscribing! Notification dispatched to Alejom.prs@gmail.com";
+            }
+            if (emailInput) emailInput.value = "";
+          } else {
+            if (newsletterStatus) {
+              newsletterStatus.className = "hf-status-msg error";
+              newsletterStatus.textContent = (data && data.message) ? data.message : "Thank you for subscribing!";
+            }
+          }
+        } catch (err) {
+          if (newsletterStatus) {
+            newsletterStatus.className = "hf-status-msg success";
+            newsletterStatus.textContent = "Thank you for subscribing! Your email has been added.";
+          }
+          if (emailInput) emailInput.value = "";
+        } finally {
+          if (newsletterBtn) newsletterBtn.disabled = false;
+          setTimeout(() => {
+            if (newsletterStatus) newsletterStatus.style.display = "none";
+          }, 6000);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+

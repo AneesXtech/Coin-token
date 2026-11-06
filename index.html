@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HouseFacts — Blockchain Real Estate Intelligence</title>
+  <meta name="description" content="HouseFacts is an institutional blockchain real estate platform transforming property data into structured digital intelligence through eight modular systems." />
+  <meta name="author" content="HouseFacts Inc." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="hf-token-bg-removed.png" />
+  <link rel="shortcut icon" type="image/png" href="hf-token-bg-removed.png" />
+  <link rel="apple-touch-icon" href="hf-token-bg-removed.png" />
+
+  <meta property="og:title" content="HouseFacts — Blockchain Real Estate Intelligence" />
+  <meta property="og:description" content="One token. Eight modules. A unified digital infrastructure for institutional real estate." />
+  <meta property="og:type" content="website" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── HEADER & NAVBAR ── -->
+  <header id="navbar">
+    <a href="#" class="hf-logo-link">
+      <div class="hf-logo-badge">
+        <img src="hf-token-bg-removed.png" alt="HouseFacts" />
+      </div>
+      <div>
+        <span class="hf-logo-title">HouseFacts</span>
+        <span class="hf-logo-subtitle">Blockchain Real Estate</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hf-desktop-nav">
+      <a href="#section-identity" class="hf-nav-link">Platform</a>
+      <a href="#section-verification" class="hf-nav-link">Modules</a>
+      <a href="#section-wallet" class="hf-nav-link">Token</a>
+      <a href="#section-marketplace" class="hf-nav-link">Ecosystem</a>
+      <a href="contact.html" class="hf-nav-link">Contact</a>
+      <a href="#" class="hf-btn-gold">Request Access</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <button class="hf-hamburger" id="hamburger-btn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="hf-mobile-menu" id="mobile-menu">
+    <div style="display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 1.5rem;">
+      <a href="#section-identity" class="hf-nav-link mobile-link" style="padding: 0.75rem 0; border-bottom: 1px solid rgba(200,150,46,0.08); display: flex; justify-content: space-between;">Platform <span>›</span></a>
+      <a href="#section-verification" class="hf-nav-link mobile-link" style="padding: 0.75rem 0; border-bottom: 1px solid rgba(200,150,46,0.08); display: flex; justify-content: space-between;">Modules <span>›</span></a>
+      <a href="#section-wallet" class="hf-nav-link mobile-link" style="padding: 0.75rem 0; border-bottom: 1px solid rgba(200,150,46,0.08); display: flex; justify-content: space-between;">Token <span>›</span></a>
+      <a href="#section-marketplace" class="hf-nav-link mobile-link" style="padding: 0.75rem 0; border-bottom: 1px solid rgba(200,150,46,0.08); display: flex; justify-content: space-between;">Ecosystem <span>›</span></a>
+      <a href="contact.html" class="hf-nav-link mobile-link" style="padding: 0.75rem 0; border-bottom: 1px solid rgba(200,150,46,0.08); display: flex; justify-content: space-between;">Contact <span>›</span></a>
+    </div>
+    <a href="#" class="hf-btn-gold" style="display: block; text-align: center; padding: 13px 24px; border-radius: 10px;">Request Access</a>
+  </div>
+
+  <!-- ── 650vh PINNED GSAP HERO SECTION ── -->
+  <div class="hf-hero-container" id="hero-container">
+    <div class="hf-hero-pin" id="hero-pin">
+      <div class="hf-hero-layout">
+
+        <!-- Headline Left -->
+        <div class="hf-hero-headline" id="hero-headline">
+          <p class="hf-headline-tag">Institutional Infrastructure</p>
+          <h1 class="hf-headline-h1">
+            HouseFacts<br />
+            <span>Token</span>
+          </h1>
+          <p class="hf-headline-desc">
+            One unified asset. Eight modular systems. An engineered digital ecosystem for property intelligence.
+          </p>
+        </div>
+
+        <!-- 3D Coin & Morphing Slices Right -->
+        <div class="hf-coin-container" id="coin-container">
+          <!-- Background Glow -->
+          <div class="hf-coin-glow" id="coin-glow"></div>
+          <!-- Orbit Ring -->
+          <div class="hf-coin-ring" id="coin-ring"></div>
+
+          <!-- 3D Coin Spin Wrapper -->
+          <div class="hf-coin-wrapper" id="coin-wrapper">
+            <div class="hf-coin-spin-layer" id="coin-spin-layer">
+              <div class="hf-coin-spinning">
+                <!-- 4 Depth layers -->
+                <div class="hf-coin-slice" style="transform: translateZ(-5px); background: linear-gradient(to right, #4a341a, #c8962e, #4a341a);"></div>
+                <div class="hf-coin-slice" style="transform: translateZ(-2px); background: #3d2b12;"></div>
+                <div class="hf-coin-slice" style="transform: translateZ(2px); background: linear-gradient(to right, #4a341a, #c8962e, #4a341a);"></div>
+                <div class="hf-coin-slice" style="transform: translateZ(5px); background: #3d2b12;"></div>
+
+                <!-- Front face -->
+                <div class="hf-coin-face-front">
+                  <img src="hf-token-bg-removed.png" alt="HouseFacts Coin Front" />
+                </div>
+                <!-- Back face -->
+                <div class="hf-coin-face-back">
+                  <img src="hf-token-bg-removed.png" alt="HouseFacts Coin Back" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Explosion Overlay SVG -->
+            <svg id="explosion-svg" style="position: absolute; inset: 0; opacity: 0; z-index: 11; pointer-events: none;"></svg>
+
+            <!-- 8 Pie Slice Pieces generated by JS -->
+            <div id="slices-container"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Connecting SVG DNA Strands -->
+      <div class="hf-svg-helix" id="svg-helix">
+        <svg viewBox="-500 -400 1000 800" preserveAspectRatio="xMidYMid meet" id="helix-svg-element"></svg>
+      </div>
+
+      <!-- Three.js Procedural 3D Helix Center -->
+      <div class="hf-canvas-center" id="canvas-center">
+        <div class="hf-canvas-glow"></div>
+        <canvas id="three-canvas"></canvas>
+      </div>
+
+      <!-- Desktop Module Labels (8 items) -->
+      <div class="hf-desktop-labels" id="desktop-labels"></div>
+
+      <!-- Mobile Overlay Grid -->
+      <div class="hf-mobile-grid" id="mobile-grid">
+        <div class="hf-mobile-grid-bg"></div>
+        <div class="hf-mobile-grid-cards" id="mobile-cards"></div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="hf-scroll-prompt" id="scroll-prompt">
+        <span>Scroll to Explore</span>
+        <div class="hf-scroll-prompt-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── STATS SECTION ── -->
+  <section class="hf-stats-bar">
+    <div class="hf-stats-grid">
+      <div>
+        <div class="hf-stat-val">8</div>
+        <div class="hf-stat-label">Core Modules</div>
+      </div>
+      <div>
+        <div class="hf-stat-val">SHA-256</div>
+        <div class="hf-stat-label">Document Security</div>
+      </div>
+      <div>
+        <div class="hf-stat-val">100%</div>
+        <div class="hf-stat-label">On-Chain Verified</div>
+      </div>
+      <div>
+        <div class="hf-stat-val">AI-Driven</div>
+        <div class="hf-stat-label">Maintenance Engine</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MODULES SECTION INTRO ── -->
+  <section class="hf-section-header">
+    <h2>Eight Modules. <span>One Connected Platform.</span></h2>
+    <p>
+      Each system module operates with institutional-grade reliability, interoperating through a shared property identity backbone.
+    </p>
+    <div class="hf-section-divider"></div>
+  </section>
+
+  <!-- ── 8 DETAILED MODULE SECTIONS ── -->
+  <div class="hf-modules-section" id="modules-list">
+    <!-- 01 Property Identity Layer -->
+    <section class="hf-module-card" id="section-identity">
+      <div class="hf-num-badge">01</div>
+      <div class="hf-module-accent-line"></div>
+      <div class="hf-module-header">
+        <div class="hf-module-icon-box">⬡</div>
+        <div>
+          <div class="hf-module-meta">Module 01 · NFT + Metadata Structure</div>
+          <h3 class="hf-module-title">Property Identity Layer</h3>
+        </div>
+      </div>
+      <p class="hf-module-desc">
+        Every property on HouseFacts is issued a unique, tamper-proof digital identity — a centralized Property Object (CPO) that aggregates ownership records, legal status, geographic coordinates, structural data, and media assets. This identity layer forms the foundation for all downstream modules.
+      </p>
+      <div class="hf-module-tags">
+        <span class="hf-tag">NFT Token Standard</span>
+        <span class="hf-tag">Metadata Schema</span>
+        <span class="hf-tag">Property Object</span>
+        <span class="hf-tag">Chain-of-Title</span>
+        <span class="hf-tag">Ownership Registry</span>
+      </div>
+    </section>
+
+    <!-- 02 Data Upload & Verification Engine -->
+    <section class="hf-module-card" id="section-verification">
+      <div class="hf-num-badge">02</div>
+      <div class="hf-module-accent-line"></div>
+      <div class="hf-module-header">
+        <div class="hf-module-icon-box">✦</div>
+        <div>
+          <div class="hf-module-meta">Module 02 · Multi-Source Validation Pipeline</div>
+          <h3 class="hf-module-title">Data Upload & Verification Engine</h3>
+        </div>
+      </div>
+      <p class="hf-module-desc">
+        Institutional-grade document upload and automated cross-validation against government registries, utility providers, and title companies. Every data point is scored for credibility, flagged for anomalies, and stored with an immutable timestamp. Supports batch ingestion for portfolio-scale operations.
+      </p>
+      <div class="hf-module-tags">
+        <span class="hf-tag">Document OCR</span>
+        <span class="hf-tag">Cross-Registry API</span>
+        <span class="hf-tag">Credibility Scoring</span>
+        <span class="hf-tag">Anomaly Detection</span>
+        <span class="hf-tag">Batch Upload</span>
+      </div>
+    </section>
+
+    <!-- 03 Token & Wallet Engine -->
+    <section class="hf-module-card" id="section-wallet">
+      <div class="hf-num-badge">03</div>
+      <div class="hf-module-accent-line"></div>
+      <div class="hf-module-header">
+        <div class="hf-module-icon-box">◈</div>
+        <div>
+          <div class="hf-module-meta">Module 03 · HF Points & Digital Asset Management</div>
+          <h3 class="hf-module-title">Token & Wallet Engine</h3>
+        </div>
+      </div>
+      <p class="hf-module-desc">
+        A fully simulated token economy built around HF Points — the platform's native digital credit unit. Users earn, transfer, and redeem HF Points for platform services. The wallet engine maintains an auditable ledger of all token movements tied to verified property activities.
+      </p>
+      <div class="hf-module-tags">
+        <span class="hf-tag">HF Points</span>
+        <span class="hf-tag">Simulated Ledger</span>
+        <span class="hf-tag">Token Transfer</span>
+        <span class="hf-tag">Activity Rewards</span>
+        <span class="hf-tag">Wallet Dashboard</span>
+      </div>
+    </section>
+
+    <!-- 04 Smart Escrow & Transaction Engine -->
+    <section class="hf-module-card" id="section-escrow">
+      <div class="hf-num-badge">04</div>
+      <div class="hf-module-accent-line"></div>
+      <div class="hf-module-header">
+        <div class="hf-module-icon-box">⬟</div>
+        <div>
+          <div class="hf-module-meta">Module 04 · Workflow Simulation — Non-Binding</div>
+          <h3 class="hf-module-title">Smart Escrow & Transaction Engine</h3>
+        </div>
+      </div>
+      <p class="hf-module-desc">
+        A legally-neutral escrow workflow simulator that guides users through staged transaction milestones: offer submission, due diligence, contingency management, and closing. Entirely workflow-based — no actual funds are held. Designed for institutional transaction training and deal structuring.
+      </p>
+      <div class="hf-module-tags">
+        <span class="hf-tag">Workflow Stages</span>
+        <span class="hf-tag">Milestone Tracking</span>
+        <span class="hf-tag">Offer Engine</span>
+        <span class="hf-tag">Due Diligence</span>
+        <span class="hf-tag">Closing Simulation</span>
+      </div>
+    </section>
+
+    <!-- 05 Document Hash & Audit System -->
+    <section class="hf-module-card" id="section-audit">
+      <div class="hf-num-badge">05</div>
+      <div class="hf-module-accent-line"></div>
+      <div class="hf-module-header">
+        <div class="hf-module-icon-box">⎊</div>
+        <div>
+          <div class="hf-module-meta">Module 05 · Cryptographic Timestamp + Admin Verification</div>
+          <h3 class="hf-module-title">Document Hash & Audit System</h3>
+        </div>
+      </div>
+      <p class="hf-module-desc">
+        Every document uploaded to the platform is SHA-256 hashed and stored alongside an immutable timestamp and admin verification signature. This creates a court-admissible audit trail for disclosures, inspections, appraisals, and all property-related filings. Full audit logs are exportable in PDF and JSON.
+      </p>
+      <div class="hf-module-tags">
+        <span class="hf-tag">SHA-256 Hashing</span>
+        <span class="hf-tag">Timestamp Log</span>
+        <span class="hf-tag">Admin Signature</span>
+        <span class="hf-tag">Audit Export</span>
+        <span class="hf-tag">Disclosure Tracking</span>
+      </div>
+    </section>
+
+    <!-- 06 Service Marketplace -->
+    <section class="hf-module-card" id="section-marketplace">
+      <div class="hf-num-badge">06</div>
+      <div class="hf-module-accent-line"></div>
+      <div class="hf-module-header">
+        <div class="hf-module-icon-box">⬢</div>
+        <div>
+          <div class="hf-module-meta">Module 06 · Vetted Agents, Vendors & Professionals</div>
+          <h3 class="hf-module-title">Service Marketplace</h3>
+        </div>
+      </div>
+      <p class="hf-module-desc">
+        An institutional-grade directory of verified real estate professionals — licensed agents, inspectors, escrow companies, law firms, and property management vendors. Every service provider is credentialed, reviewed, and connected directly to property transactions through a structured RFP workflow.
+      </p>
+      <div class="hf-module-tags">
+        <span class="hf-tag">Agent Directory</span>
+        <span class="hf-tag">Vendor Credentials</span>
+        <span class="hf-tag">RFP Workflow</span>
+        <span class="hf-tag">Service Reviews</span>
+        <span class="hf-tag">Direct Connect</span>
+      </div>
+    </section>
+
+    <!-- 07 Predictive Maintenance Engine -->
+    <section class="hf-module-card" id="section-maintenance">
+      <div class="hf-num-badge">07</div>
+      <div class="hf-module-accent-line"></div>
+      <div class="hf-module-header">
+        <div class="hf-module-icon-box">⎈</div>
+        <div>
+          <div class="hf-module-meta">Module 07 · AI-Driven Asset Health Intelligence</div>
+          <h3 class="hf-module-title">Predictive Maintenance Engine</h3>
+        </div>
+      </div>
+      <p class="hf-module-desc">
+        Leveraging historical maintenance data, IoT sensor inputs, and regional climate analytics, the Predictive Maintenance Engine models failure probability across all major building systems. Landlords and asset managers receive ranked intervention recommendations with estimated cost ranges and ROI projections.
+      </p>
+      <div class="hf-module-tags">
+        <span class="hf-tag">Failure Probability</span>
+        <span class="hf-tag">IoT Integration</span>
+        <span class="hf-tag">System Modeling</span>
+        <span class="hf-tag">Cost Estimation</span>
+        <span class="hf-tag">ROI Projection</span>
+      </div>
+    </section>
+
+    <!-- 08 3D / VR Walkthroughs -->
+    <section class="hf-module-card" id="section-vr">
+      <div class="hf-num-badge">08</div>
+      <div class="hf-module-accent-line"></div>
+      <div class="hf-module-header">
+        <div class="hf-module-icon-box">◉</div>
+        <div>
+          <div class="hf-module-meta">Module 08 · Immersive Property Visualization</div>
+          <h3 class="hf-module-title">3D / VR Walkthroughs</h3>
+        </div>
+      </div>
+      <p class="hf-module-desc">
+        Browser-native 3D property tours powered by WebGL with optional VR headset support. Spatial metadata overlays display room dimensions, material specs, system locations, and utility entry points in real-time. Enables remote due diligence, institutional portfolio reviews, and tenant pre-qualification at scale.
+      </p>
+      <div class="hf-module-tags">
+        <span class="hf-tag">WebGL Rendering</span>
+        <span class="hf-tag">VR Support</span>
+        <span class="hf-tag">Spatial Metadata</span>
+        <span class="hf-tag">Room Analytics</span>
+        <span class="hf-tag">Remote Due Diligence</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- ── CTA BANNER ── -->
+  <section class="hf-cta-banner">
+    <div class="hf-cta-glow"></div>
+    <p class="hf-cta-tag">HouseFacts · Blockchain Real Estate</p>
+    <h2 class="hf-cta-h2">Property Data.<br />Reimagined as Intelligence.</h2>
+    <p class="hf-cta-desc">
+      A unified digital infrastructure that transforms raw property data into a living, structured ecosystem — built for institutional trust.
+    </p>
+    <div class="hf-cta-actions">
+      <a href="#" class="hf-btn-gold" style="padding: 14px 40px; font-size: clamp(0.75rem, 2vw, 0.88rem); border-radius: 10px;">Request Institutional Access</a>
+      <a href="#" class="hf-btn-outline">View Documentation</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer id="footer">
+    <div class="hf-footer-inner">
+      <div class="hf-footer-grid">
+        <!-- Brand column -->
+        <div>
+          <a href="#" class="hf-logo-link" style="margin-bottom: 1.25rem;">
+            <div class="hf-logo-badge" style="width: 52px; height: 52px;">
+              <img src="hf-token-bg-removed.png" alt="HouseFacts" style="width: 40px; height: 40px;" />
+            </div>
+            <span class="hf-logo-title" style="font-size: 1.15rem;">HouseFacts</span>
+          </a>
+          <p style="color: rgba(120,100,55,0.65); font-size: 0.84rem; line-height: 1.75; max-width: 260px; margin-bottom: 1.5rem;">
+            Institutional-grade digital infrastructure for the future of property intelligence and blockchain real estate.
+          </p>
+          <div class="hf-social-row">
+            <a href="#" class="hf-social-btn" title="Twitter/X">𝕏</a>
+            <a href="#" class="hf-social-btn" title="LinkedIn">in</a>
+            <a href="#" class="hf-social-btn" title="Discord">◈</a>
+            <a href="#" class="hf-social-btn" title="Telegram">⬡</a>
+          </div>
+        </div>
+
+        <!-- Links: Platform -->
+        <div class="hf-footer-col">
+          <h4>Platform</h4>
+          <a href="#section-identity" class="hf-footer-link">Property Identity</a>
+          <a href="#section-verification" class="hf-footer-link">Data Verification</a>
+          <a href="#section-escrow" class="hf-footer-link">Smart Escrow</a>
+          <a href="#section-audit" class="hf-footer-link">Audit System</a>
+        </div>
+
+        <!-- Links: Modules -->
+        <div class="hf-footer-col">
+          <h4>Modules</h4>
+          <a href="#section-wallet" class="hf-footer-link">Token &amp; Wallet</a>
+          <a href="#section-marketplace" class="hf-footer-link">Marketplace</a>
+          <a href="#section-maintenance" class="hf-footer-link">Maintenance AI</a>
+          <a href="#section-vr" class="hf-footer-link">VR Walkthroughs</a>
+        </div>
+
+        <!-- Links: Company -->
+        <div class="hf-footer-col">
+          <h4>Company</h4>
+          <a href="#" class="hf-footer-link">About Us</a>
+          <a href="#" class="hf-footer-link">Careers</a>
+          <a href="#" class="hf-footer-link">Press Kit</a>
+          <a href="#" class="hf-footer-link">Blog</a>
+        </div>
+
+        <!-- Links: Legal -->
+        <div class="hf-footer-col">
+          <h4>Legal</h4>
+          <a href="#" class="hf-footer-link">Privacy Policy</a>
+          <a href="#" class="hf-footer-link">Terms of Service</a>
+          <a href="#" class="hf-footer-link">Cookie Policy</a>
+          <a href="#" class="hf-footer-link">Compliance</a>
+        </div>
+      </div>
+
+      <!-- Newsletter Bar -->
+      <div class="hf-newsletter-box">
+        <div>
+          <div class="hf-newsletter-title">Stay ahead of institutional real estate</div>
+          <div class="hf-newsletter-desc">Get platform updates, module releases &amp; research briefs.</div>
+        </div>
+        <form class="hf-newsletter-form" id="newsletter-form">
+          <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" class="hf-newsletter-input" required />
+          <button type="submit" id="newsletter-btn" class="hf-btn-gold">Subscribe</button>
+        </form>
+      </div>
+      <div id="newsletter-status" class="hf-status-msg" style="display:none; margin-top:-1rem; margin-bottom:1.5rem; text-align:right;"></div>
+
+      <div class="hf-section-divider" style="margin-bottom: 2rem; max-width: 100%;"></div>
+
+      <!-- Bottom Bar -->
+      <div class="hf-footer-bottom">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <div style="width: 6px; height: 6px; border-radius: 50%; background: #c8962e; animation: pulse-gold 2.5s ease infinite;"></div>
+          <span style="color: rgba(120,100,55,0.5); font-size: 0.73rem;">© 2025 HouseFacts Inc. All rights reserved.</span>
+        </div>
+        <div class="hf-footer-legal-links">
+          <a href="#" class="hf-footer-legal-link">Privacy Policy</a>
+          <a href="#" class="hf-footer-legal-link">Terms of Service</a>
+          <a href="#" class="hf-footer-legal-link">Cookie Policy</a>
+          <a href="#" class="hf-footer-legal-link">Compliance</a>
+        </div>
+        <div>
+          <span style="font-size: 0.65rem; color: rgba(100,80,40,0.5); letter-spacing: 0.03em;">Built on Blockchain · Secured by SHA-256</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── FLOATING BACK TO TOP BUTTON ── -->
+  <button id="back-to-top" class="hf-back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ── SCRIPTS: Three.js + RGBELoader + GSAP + ScrollTrigger ── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/RGBELoader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
