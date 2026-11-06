@@ -13,3 +13,4 @@ Institutional-grade property intelligence and decentralized verification. An 8-m
 
 ## Deployment
 Simply upload the contents of this repository to your web server (e.g., Apache, Nginx, or cPanel `public_html`).
+
