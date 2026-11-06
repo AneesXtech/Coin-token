@@ -1,0 +1,53 @@
+========================================================================
+  HOUSEFACTS TOKEN - GODADDY HOSTING DEPLOYMENT GUIDE
+========================================================================
+
+Dear Client / Developer,
+
+This package is 100% production-ready for your GoDaddy (cPanel / Linux) hosting server.
+It contains the complete website with:
+- 3D Three.js DNA Helix & Reflective Gold Coin
+- Interactive 8-phase GSAP Scroll Animations
+- Dedicated Contact Page (contact.html)
+- PHP Mailer Backend (contact.php) directing to Alejom.prs@gmail.com
+- Footer Newsletter Subscription Form
+- Floating Back to Top Button
+- Optimized .htaccess for GoDaddy Apache servers
+
+------------------------------------------------------------------------
+HOW TO DEPLOY ON GODADDY IN 3 MINUTES:
+------------------------------------------------------------------------
+
+STEP 1: Log in to your GoDaddy Account
+   - Go to your "My Products" page.
+   - Click "Manage" next to "Web Hosting" (cPanel).
+   - Click "cPanel Admin".
+
+STEP 2: Open File Manager
+   - In cPanel, find and click "File Manager".
+   - Double-click on the "public_html" folder (or your subdomain folder).
+   - (Note: If you have old default files like index.html or hostingstart.html, delete them).
+
+STEP 3: Upload & Extract
+   - Click "Upload" at the top toolbar.
+   - Select and upload "HouseFacts-GoDaddy-Production-Ready.zip".
+   - Once the upload bar turns green (100%), go back to File Manager.
+   - Right-click on the uploaded ZIP file and click "Extract".
+   - Click "Extract Files".
+
+STEP 4: Test Your Website
+   - Open your domain in any browser: https://yourdomain.com
+   - The homepage, 3D Helix, animations, and Contact page will be live immediately!
+   - Test submitting the Contact form or Newsletter form to verify email delivery to Alejom.prs@gmail.com.
+
+------------------------------------------------------------------------
+EMAIL CONFIGURATION NOTE (contact.php):
+------------------------------------------------------------------------
+- Destination Email: Alejom.prs@gmail.com (Hardcoded & pre-configured)
+- By default, it uses GoDaddy's built-in PHP mail() which works out-of-the-box.
+- If you prefer to use authenticated SMTP (e.g., Gmail App Password or GoDaddy cPanel Webmail), 
+  simply open "contact.php" and set USE_SMTP to true at line 30 with your credentials.
+
+========================================================================
+Support & Assistance: Ready for institutional deployment.
+========================================================================
